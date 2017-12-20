@@ -11,7 +11,7 @@ sys.setdefaultencoding('utf8')
 
 class DzdpPipeline(object):
     def process_item(self, item, spider):
-        conn = pymysql.connect(host='192.168.3.232', port=3306, user='zwj', passwd='123456', db='caiji',
+        conn = pymysql.connect(host='ip', port=3306, user='zwj', passwd='123456', db='test',
                                charset='utf8')
         cursor = conn.cursor()
         sql = "insert into DZDP(NAME,ADDR,PHONE,COMMENT,CPP,SCORE,ENVIR,CJMC,CITY,HREF) values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')" \
